@@ -3,6 +3,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { PreImage } from "../../common/PreImage";
 import logo from "../../../../../public/logo.svg";
+import { Bungee } from 'next/font/google'
+
+const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,13 +30,16 @@ const Header = () => {
 
   return (
     <section
-      className={`w-full sticky top-0 z-50 flex justify-between items-center gap-5 px-5 md:px-40 bg-white transition ${isScrolled
+      className={`w-full sticky top-0 z-50 flex justify-between items-center gap-5 px-5 py-5 md:px-40 bg-white transition ${isScrolled
           ? "absolute text-white border-b-[1px] border-opacity-50 border-slate-300 inset-0 bg-slate-900 bg-opacity-10 backdrop-filter backdrop-blur duration-500 ease-in-out"
           : "bg-transparent bg-opacity-100 duration-500 ease-in-out "
         }`}
     >
       <div className="flex justify-around items-center">
-        <PreImage height={100} width={100} src={logo} alt={"Logo"} layer={false} />
+        <div className={bungee.className}>
+          <p className="text-4xl">METAVERSE</p>
+        </div>
+        {/* <PreImage height={100} width={100} src={logo} alt={"Logo"} layer={false} /> */}
 
       </div>
       <div className="flex justify-center items-center gap-10">

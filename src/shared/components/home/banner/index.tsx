@@ -1,9 +1,9 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { PreImage } from '../../common/PreImage';
-import IconArrowLeft from '../../icon/IconArrowLeft';
-import IconArrowRight from '../../icon/IconArrowRight';
-import ContentBanner from './ContentBanner';
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { PreImage } from "../../common/PreImage";
+import IconArrowLeft from "../../icon/IconArrowLeft";
+import IconArrowRight from "../../icon/IconArrowRight";
+import ContentBanner from "./ContentBanner";
 export interface Data {
   title: string;
   description: string;
@@ -27,26 +27,32 @@ const Banner = ({ data }: Props) => {
       return prevIndex >= 0 ? data[prevIndex] : data[data.length - 1];
     });
   };
-
+  
   return (
-    <section className='block m-8'>
-      <div className='snap-x-mandatory scrollbar-none relative max-h-[700px] flex overflow-hidden text-white bg-[var(--blue-color-700)] rounded-lg'>
+    <section className="block m-8">
+      <div className="snap-x-mandatory scrollbar-none relative max-h-[700px] flex overflow-hidden text-white bg-[var(--blue-color-700)] rounded-lg">
+        <div className="w-full flex justify-between items-center mx-auto">
         <ContentBanner selectedTab={selectedTab && selectedTab} />
-        <div className='absolute bottom-10 right-10'>
-          <div className='flex items-center justify-between gap-5'>
-            <ul className='hidden md:flex items-center justify-between gap-5'>
+        </div>
+        <div className="absolute bottom-10 right-10">
+          <div className="flex items-center justify-between gap-5">
+            <ul className="hidden md:flex items-center justify-between gap-5">
               {data.map((item, idx) => (
                 <li
                   key={idx}
-                  className={`${item === selectedTab ? 'text-white' : 'text-slate-300 '} cursor-pointer font-medium`}
+                  className={`${
+                    item === selectedTab ? "text-white" : "text-slate-300 "
+                  } cursor-pointer font-medium`}
                   onClick={() => setSelectedTab(item)}
                 >
                   {`${item.title}`}
-                  {item === selectedTab ? <motion.div className='' layoutId='underline' /> : null}
+                  {item === selectedTab ? (
+                    <motion.div className="" layoutId="underline" />
+                  ) : null}
                 </li>
               ))}
             </ul>
-            <div className='flex items-center justify-center gap-5 cursor-pointer z-30'>
+            <div className="flex items-center justify-center gap-5 cursor-pointer z-30">
               <IconArrowLeft onClick={handlePrev} />
               <IconArrowRight onClick={handleNext} />
             </div>

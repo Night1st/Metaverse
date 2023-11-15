@@ -6,7 +6,7 @@ interface Props {
   cls?: any;
 }
 
-const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
+
 
 const BtnFindOut = ({ cls }: Props) => {
   const buttonVariants = {
@@ -23,9 +23,7 @@ const BtnFindOut = ({ cls }: Props) => {
       whileHover="hover"
       className={`bg-[var(--blue-color-400)] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer mt-3 ${cls}`}
     >
-      <div className={bungee.className}>
       <p className="text-sm">Tìm hiểu thêm</p>
-      </div>
 
       <IconLineDirection  color="#000" />
       <motion.div

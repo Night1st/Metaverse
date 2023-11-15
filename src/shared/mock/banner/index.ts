@@ -23,5 +23,11 @@ export const bannerData = [
 ];
 
 export const homeData = [
-    
+    {
+        title: "METAVERSE",
+        description:
+            "Nơi cung cấp giải pháp phù hợp, toàn diện và đồng hành cùng quá trình phát triển của khách hàng",
+        image:
+            "",
+    },
 ]

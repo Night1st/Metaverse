@@ -1,7 +1,7 @@
 import Head from "next/head";
 import LayoutWebsite from "@/shared/components/layout/LayoutWebsite";
 import Banner from "@/shared/components/home/banner";
-import { bannerData } from "@/shared/mock/banner";
+import { homeData } from "@/shared/mock/banner";
 import NextGenerationSolution from "@/shared/components/home/nextGenerationSolution";
 import WhyUs from "@/shared/components/home/whyUs";
 import Testimonial from "@/shared/components/home/testimonial";
@@ -18,7 +18,7 @@ export function Home() {
         <meta name="description" content="Trang chủ NGS" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
       </Head>
-      <Banner data={bannerData} />
+      <Banner data={homeData} />
       <NextGenerationSolution />
       <Service/>
       <WhyUs />

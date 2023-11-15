@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Data } from ".";
 import BtnFindOut from "../../common/BtnFindOut";
+import { Bungee } from 'next/font/google'
 export const staggerChildren = {
   animate: {
     transition: {
@@ -27,13 +28,14 @@ export const wordAnimation = {
 interface Props {
   selectedTab: Data;
 }
+const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
 const ContentBanner = ({ selectedTab }: Props) => {
   return (
     <div className="flex min-h-screen flex-col justify-center items-center leading-[90%] tracking-wide lg:left-0 lg:w-[50%] lg:px-16 lg:items-start">
       <div className="text-left text-4xl font-bold capitalize lg:text-6xl">
         {/* <h1 className="inline-block pr-2 text-4xl lg:text-6xl">Cải Tiến</h1> */}
         <AnimatePresence mode="wait">
-          <motion.span variants={staggerChildren} animate="animate">
+          <motion.span variants={staggerChildren} animate="animate" className={bungee.className}>
             {selectedTab
               ? selectedTab.title.split(" ").map((word, idx) => (
                   <motion.div
