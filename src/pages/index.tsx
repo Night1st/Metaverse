@@ -20,6 +20,7 @@ export function Home() {
       </Head>
       <Banner data={homeData} />
       <NextGenerationSolution />
+      <WhyUs />
       <Service/>
       <WhyUs />
       <Event />
