@@ -9,6 +9,8 @@ import Service from "@/shared/components/home/service";
 import Event from "@/shared/components/home/event";
 import News from "@/shared/components/home/news";
 import Partner from "@/shared/components/home/partner";
+import { WhyUsData } from "@/shared/mock/whyUs";
+import ConnectForm from "@/shared/components/common/ConnectForm";
 
 export function Home() {
   return (
@@ -20,9 +22,10 @@ export function Home() {
       </Head>
       <Banner data={homeData} />
       <NextGenerationSolution />
-      <WhyUs />
+      <WhyUs data={WhyUsData}/>
       <Service/>
-      <WhyUs />
+      <ConnectForm/>
+      {/* <WhyUs /> */}
       <Event />
       <News />
       <Partner/>

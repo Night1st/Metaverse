@@ -2,23 +2,23 @@ export const WhyUsData = [
     {
         key: 1,
         category: "Chuyển đổi số toàn diện",
-        title: "Sáng tạo",
+        title: "Tầm nhìn",
         description:
-            "Với khát vọng trở thành người đồng hành trao quyền cho mọi cá nhân và tổ chức, NGS cam kết luôn nỗ lực phát triển những giải pháp công nghệ thông tin tối ưu",
+            "Nội dung tầm nhìn",
     },
     {
         key: 2,
         category: "Chi phí tối ưu",
-        title: "Linh hoạt",
+        title: "Sứ mệnh",
         description:
-            "NGS nỗ lực trở thành doanh nghiệp hàng đầu Việt Nam, cung cấp các giải pháp - dịch vụ thông minh; đem lại giá trị lớn và phù hợp nhất cho khách hàng.",
+            "Nội dung sứ mệnh",
     },
     {
         key: 3,
         category: "Chuyển đổi số toàn diện",
-        title: "Tập trung khách hàng",
+        title: "Giá trị cốt lõi",
         description:
-            "Được cung cấp bởi Công ty NGS.IT với các sản phẩm công nghệ thông tin như bản quyền phần mềm; giải pháp phần mềm; giải pháp hạ tầng công nghệ thông tin và các dịch vụ công nghệ thông tin.",
+            "Nội dung giá trị cốt lõi",
     },
 
 ];

@@ -29,12 +29,14 @@ const Banner = ({ data }: Props) => {
   };
   
   return (
-    <section className="block m-8">
-      <div className="snap-x-mandatory scrollbar-none relative max-h-[700px] flex overflow-hidden text-white bg-[var(--blue-color-700)] rounded-lg">
+    <section className="block">
+      
+      <div className="snap-x-mandatory scrollbar-none relative bg-cover flex overflow-hidden text-white bg-[url('/images/BannerHome.png')] rounded-lg">
+        
         <div className="w-full flex justify-between items-center mx-auto">
         <ContentBanner selectedTab={selectedTab && selectedTab} />
         </div>
-        <div className="absolute bottom-10 right-10">
+        {/* <div className="absolute bottom-10 right-10">
           <div className="flex items-center justify-between gap-5">
             <ul className="hidden md:flex items-center justify-between gap-5">
               {data.map((item, idx) => (
@@ -57,7 +59,7 @@ const Banner = ({ data }: Props) => {
               <IconArrowRight onClick={handleNext} />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
