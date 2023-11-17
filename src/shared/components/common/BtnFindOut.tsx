@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 import IconLineDirection from "../icon/IconLineDirection";
-import { Bungee } from 'next/font/google'
 
 interface Props {
   cls?: any;
 }
-
-
 
 const BtnFindOut = ({ cls }: Props) => {
   const buttonVariants = {

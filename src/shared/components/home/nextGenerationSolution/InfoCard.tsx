@@ -5,20 +5,19 @@ import BtnFindOut from "../../common/BtnFindOut";
 
 interface Props {
   title: string;
-  description: string;
 }
 
-const InfoCard = ({ title, description }: Props) => {
+const InfoCard = ({ title }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center p-5 cursor-pointer overflow-hidden border-collapse"
+      className="flex flex-col justify-center items-center rounded-xl p-5 cursor-pointer overflow-hidden border-collapse"
       style={{ border: "1px solid #555" }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       animate={{
-        backgroundColor: isHovered ? "var(--blue-color-400)" : "#fff",
+        backgroundColor: isHovered ? "#1B3864" : "#fff",
         color: isHovered ? "#fff" : "#000",
       }}
       transition={{
@@ -35,9 +34,9 @@ const InfoCard = ({ title, description }: Props) => {
           className="mb-10"
         />
       </div>
-      <div className="flex flex-col justify-center items-start gap-10">
-        <h1 className="text-2xl uppercase">{title}</h1>
-        <p>{description}</p>
+      <div className="flex flex-col justify-center text-center items-center gap-10">
+        <h1 className="text-2xl">{title}</h1>
+        {/* <p>{description}</p> */}
         <BtnFindOut />
       </div>
     </motion.div>

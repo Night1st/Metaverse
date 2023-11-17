@@ -1,18 +1,17 @@
-import { NGSDataGSL } from "@/shared/mock/nextGenerationSolution";
+import { MetaData } from "@/shared/mock/nextGenerationSolution";
 import TitleSection from "../../common/TitleSection";
 import InfoCard from "./InfoCard";
 
 const NextGenerationSolution = () => {
   return (
-    <section className="px-32">
+    <section className="px-32 text-center">
       <TitleSection
-        title="Giải pháp"
-        description="Cung cấp các giải pháp số cho doanh nghiệp của bạn"
-        findMore={true}
+        title="GIẢI PHÁP"
+        description="Metaverse cung cấp giải pháp toàn diện trong nhiều lĩnh vực"
       />
-      <div className="w-full min-h-[250px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 bg-[var(--blue-color-500)] overflow-hidden">
-        {NGSDataGSL.map((item, idx) => (
-          <InfoCard key={idx} title={item.title} description={item.des} />
+      <div className="w-full min-h-[250px] grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 mt-10 overflow-hidden">
+        {MetaData.map((item, idx) => (
+          <InfoCard key={idx} title={item.title} />
         ))}
       </div>
     </section>
