@@ -6,8 +6,8 @@ interface Props {
 }
 const InforFooter = ({ title, info }: Props) => {
   return (
-    <ul className="flex flex-col justify-end items-start">
-      <h2 className="font-medium">{title}</h2>
+    <ul className="flex flex-col justify-end items-start ">
+      <h1 className="text-2xl">{title}</h1>
       {info.map((item, inx) => (
         <Link href={"#"} key={inx}>
           <li>{item}</li>

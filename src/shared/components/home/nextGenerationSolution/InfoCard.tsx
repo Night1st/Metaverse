@@ -5,9 +5,10 @@ import BtnFindOut from "../../common/BtnFindOut";
 
 interface Props {
   title: string;
+  icon: string
 }
 
-const InfoCard = ({ title }: Props) => {
+const InfoCard = ({ title, icon }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -27,7 +28,7 @@ const InfoCard = ({ title }: Props) => {
     >
       <div className="flex items-start">
         <PreImage
-          src="https://media.istockphoto.com/id/807772812/photo/free-price-tag-label.jpg?b=1&s=612x612&w=0&k=20&c=fzSheLfuW29DGtg5nVudNgp0Wzvh4oaxTrI0qoZtsPU="
+          src={icon}
           width={50}
           height={50}
           alt="solution"

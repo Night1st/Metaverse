@@ -34,12 +34,6 @@ const ServiceSection = ({ item, idx }: Props) => {
         }}
       >
         <p>{item.des}</p>
-        <div className={bungee.className}>
-        <p className="my-3 text-sm text-[var(--blue-color-300)] cursor-pointer">
-          Tìm hiểu thêm
-        </p>
-        </div>
-
       </motion.div>
     </div>
   );

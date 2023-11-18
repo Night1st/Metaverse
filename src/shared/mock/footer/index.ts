@@ -1,10 +1,10 @@
 export const footerData = {
     contactData: {
-        address: "458 Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội",
-        phone: "1800.808.88",
-        email: "info@ngs.vn"
+        address: "Tòa 6th Element, đường Nguyễn Văn Huyên, phường Xuân La, quận Tây Hồ, thành phố Hà Nội",
+        phone: "+84 123 456 789",
+        email: "support@mtv.com.vn"
     },
-    service: ["Your Next Gen Solution", "Transform Your Organization", "Secure Your Business"],
-    company: ["Shape Your Career", "NGS Talent Hub", "NGS in News", "Empower Success"],
-    support: ["Terms of use", "Cookie Policy", "Sitemap"]
+    service: ["Quản lý doanh nghiệp", "Định giá tài sản", "Giáo dụng trực tuyến", "Ứng dụng trong giải trí"],
+    aboutUs: ["Về chúng tôi", "Tin tức", "Tuyển dụng"],
+    support: ["FAQ", "Liên hệ Metaverse", "Điều khoản sử dụng"]
 }

@@ -4,8 +4,8 @@ interface Props {
 }
 const TitleSection = (data: Props) => {
   return (
-    <div className="w-full flex flex-col gap-3 mt-5">
-      <p className="text-[var(--blue-color-300)] text-3xl">{data.title}</p>
+    <div className="w-full flex flex-col gap-3 mt-20">
+      <p className="text-[#1B3864] text-6xl ">{data.title}</p>
       <h1 className="text-xl">{data.description}</h1>
     </div>
   );

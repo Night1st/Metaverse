@@ -12,11 +12,10 @@ const Testimonial = () => {
 
   return (
     <section className="mx-auto px-32 py-10">
-      <div className="w-full flex flex-col justify-around items-center">
+      <div className="w-full flex flex-col justify-around items-center text-center">
         <TitleSection
-          title="Testimonial"
-          description="Khách hàng nói gì về chúng tôi"
-          findMore={true}
+          title="KHÁCH HÀNG"
+          description="Những đơn vị đã hài lòng với giải pháp của Metaverse"
         />
         <div className="mt-10 w-full grid grid-cols-3 justify-between items-end gap-10">
           <AnimatePresence>

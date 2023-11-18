@@ -6,6 +6,7 @@ import IconNGS from './IconNGS';
 import { motion } from 'framer-motion';
 import IconArrowLeft from '../../icon/IconArrowLeft';
 import IconArrowRight from '../../icon/IconArrowRight';
+import TitleSection from '../../common/TitleSection';
 
 interface Props {
   data: IWhyUsData[];
@@ -28,8 +29,8 @@ const WhyUs = ({ data }: Props) => {
   return (
     <>
       <section className='mx-auto px-32 py-10'>
-        <div className='w-full flex flex-col justify-around items-center'>
-          <TextHighLight text='VỀ CHÚNG TÔI' />
+        <div className='w-full flex flex-col justify-around items-center text-center'>
+          <TitleSection title='VỀ CHÚNG TÔI' description=''/>
           <div className='flex items-center justify-between gap-10 py-5'>
             {data.map((item, index) => (
               <button
@@ -76,6 +77,24 @@ const WhyUs = ({ data }: Props) => {
               ></motion.div>
             </motion.button>
           </div>
+            <div className='w-1/2 grid grid-cols-4 justify-center items-center py-5 gap-10'>
+              <div className='flex flex-col'>
+                <p className='text-5xl text-[#1B3864]'>+05</p>
+                <h1 className='text-2xl py-3'>năm hình thành và phát triển</h1>
+              </div>
+              <div className='flex flex-col'>
+                <p className='text-5xl text-[#1B3864]'>+10</p>
+                <h1 className='text-2xl py-3'>nhân sự</h1>
+              </div>
+              <div className='flex flex-col'>
+                <p className='text-5xl text-[#1B3864]'>+15</p>
+                <h1 className='text-2xl py-3'>khách hàng</h1>
+              </div>
+              <div className='flex flex-col'>
+                <p className='text-5xl text-[#1B3864]'>+20</p>
+                <h1 className='text-2xl py-3'>dự án thành công</h1>
+              </div>
+            </div>
         </div>
       </section>
     </>

@@ -6,23 +6,12 @@ import { AnimatePresence } from "framer-motion";
 
 const Service = () => {
   return (
-    <section className="px-32">
+    <section className="px-32 text-center">
       <TitleSection
-        title="Dịch vụ"
-        description="Thay đổi bộ mặt Doanh nghiệp của bạn bằng giải pháp quản lý mới"
-        findMore={true}
+        title="CÓ THỂ BẠN QUAN TÂM"
+        description="Một số câu hỏi thường gặp có thể giải đáp thắc mắc cho bạn"
       />
-      <div className="w-full mt-10 flex items-start justify-between">
-        <PreImage
-          src={
-            "https://khoinguonsangtao.vn/wp-content/uploads/2022/11/hinh-nen-may-bay-vietnam-airline.jpg"
-          }
-          height={550}
-          width={500}
-          layer={false}
-          alt={"Service"}
-          className="relative rounded-lg"
-        />
+      <div className="w-full mt-10 flex items-start justify-center">
         <AnimatePresence>
         <div className="w-1/2 flex flex-col justify-center items-center">
           {NGSDataService.map((item, idx) => {

@@ -23,13 +23,9 @@ export function Home() {
       <Banner data={homeData} />
       <NextGenerationSolution />
       <WhyUs data={WhyUsData}/>
-      <Service/>
-      <ConnectForm/>
-      {/* <WhyUs /> */}
-      <Event />
-      <News />
-      <Partner/>
       <Testimonial />
+      <ConnectForm/>
+      <Service/>
     </>
   );
 }

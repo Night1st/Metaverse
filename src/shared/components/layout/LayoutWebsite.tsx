@@ -7,8 +7,9 @@ interface Props {
 const LayoutWebsite = ({ children }: Props) => {
   return (
     <>
-      <Header />
+      
       <main className="min-h-screen">
+      <Header />
       {children}
       </main>
       <Footer />
