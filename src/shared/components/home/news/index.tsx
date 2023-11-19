@@ -9,7 +9,6 @@ const News = () => {
       <TitleSection
         title="Tin tức"
         description="Gặp gỡ chuyên gia từ NGS và khám phá cách phát triển doanh nghiệp của bạn."
-        findMore={true}
       />
       <div className="w-full mt-10 flex justify-between items-start gap-10">
         <PreImage
