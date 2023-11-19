@@ -9,10 +9,10 @@ const Partner = () => {
         <TitleSection
           title="Dịch vụ"
           description="Thay đổi bộ mặt Doanh nghiệp của bạn bằng giải pháp quản lý mới"
-          findMore={true}
         />
         <div className="w-full mt-10 flex items-start justify-between gap-5" style={{borderBottom: "1px solid #555"}}>
           {partnerData.map((item) => (
+            // eslint-disable-next-line react/jsx-key
             <PreImage
               src={item.logo}
               height={200}
