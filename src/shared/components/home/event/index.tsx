@@ -8,7 +8,6 @@ const Event = () => {
       <TitleSection
         title="Sự kiện"
         description="Gặp gỡ chuyên gia từ NGS và khám phá cách phát triển doanh nghiệp của bạn."
-        findMore={true}
       />
       <div className="w-full mt-10 grid grid-cols-3">
         {eventData.map((item, idx) => (
