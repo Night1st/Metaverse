@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{"/_app":["static/media/05a31a2ca4975f99-s.p.woff2","static/media/15a7d029a2208156-s.p.woff2"],"/":["static/media/15a7d029a2208156-s.p.woff2"]},"app":{},"appUsingSizeAdjust":false,"pagesUsingSizeAdjust":true}';
