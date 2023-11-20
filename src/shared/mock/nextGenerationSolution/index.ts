@@ -1,5 +1,6 @@
 export const MetaData = [
     {
+        key: 0,
         title: "Giải pháp Quản lý doanh nghiệp",
         description: "Metaverse cung cấp nhóm giải pháp quản lý doanh nghiệp phù hợp, hiệu quả với từng khách hàng, với một số giải pháp sau:",
         details: [
@@ -13,6 +14,7 @@ export const MetaData = [
         icon: "/images/icon1.png"
     },
     {
+        key: 1,
         title: "Giải pháp Định giá tài sản",
         description: "Giải pháp định giá tài sản theo nhiều phương pháp và quy trình chuyên môn chính xác, đáng tin cậy.",
         details: [
@@ -24,6 +26,7 @@ export const MetaData = [
         icon: "/images/icon2.png"
     },
     {
+        key: 2,
         title: "Giải pháp Giáo dục trực tuyến",
         description: "Metaverse cung cấp các giải pháp giáo dục và đào tạo linh hoạt và tiện lợi thông qua môi trường trực tuyến:",
         details: [
@@ -35,6 +38,7 @@ export const MetaData = [
         icon: "/images/icon3.png"
     },
     {
+        key: 3,
         title: "Giải pháp Ứng dụng trong giải trí",
         description: "Ứng dụng giải pháp công nghệ vào lĩnh vực giải trí mang đến những trải nghiệm tiện ích đa dạng, cá nhân hóa với tính tương tác cao:",
         details: [

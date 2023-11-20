@@ -36,7 +36,7 @@ const ContentBanner = ({ data }: Props) => {
       <div className="text-left text-4xl font-bold capitalize lg:text-6xl">
         {/* <h1 className="inline-block pr-2 text-4xl lg:text-6xl">Cải Tiến</h1> */}
         <AnimatePresence mode="wait">
-          <motion.span variants={staggerChildren} animate="animate" className={bungee.className}>
+          <motion.span variants={staggerChildren} animate="animate" className={data.title == "METAVERSE" ? bungee.className : ""}>
             {data.title}
           </motion.span>
         </AnimatePresence>
