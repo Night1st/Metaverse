@@ -30,4 +30,11 @@ export const homeData = [
         image:
             "",
     },
+    {
+        title: "Giải pháp",
+        description:
+            "Nơi cung cấp giải pháp phù hợp, toàn diện và đồng hành cùng quá trình phát triển của khách hàng",
+        image:
+            "",
+    },
 ]
