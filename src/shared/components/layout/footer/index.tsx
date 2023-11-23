@@ -1,7 +1,7 @@
 import { footerData } from "@/shared/mock/footer";
-import FooterNGS from "../../icon/logo/FooterNGS";
 import InforFooter from "./info";
 import { Bungee } from 'next/font/google'
+import Image from 'next/image';
 
 const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
 
@@ -13,9 +13,11 @@ const Footer = () => {
           <div className={bungee.className}>
             <p className="text-4xl">METAVERSE</p>
           </div>
-          <p>Địa chỉ: {footerData.contactData.address}</p>
-          <p>Số điện thoại: {footerData.contactData.phone}</p>
-          <p>Email: {footerData.contactData.email}</p>
+            {footerData.contactData.map((item, idx) => (
+              <p key={idx} className="flex items-start gap-2">
+                <Image height={30} width={30} src={item.icon} alt={''}></Image>
+              {item.title}</p>
+            ))}
         </div>
         <div className="flex flex-col">
           <InforFooter title="Giải pháp" info={footerData.service} />
