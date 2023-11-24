@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import BtnFindOut from './BtnFindOut';
-import TitleSection from './TitleSection';
 import SuccessProject from './SuccessProject';
 
-interface Solution {
+export interface Solution {
   key: number;
   title: string;
   description: string;
-  details: string[];
+  details: SolutionDetail[];
   image: string;
+}
+
+interface SolutionDetail {
+  title: string,
+  description: string
 }
 
 interface Props {
@@ -30,7 +34,7 @@ const SolutionOverview = ({ solution }: Props) => {
                 {item.details.map((detail, index) => (
                   <li key={index} className='flex text-lg gap-2 items-center'>
                     <Image height={30} width={30} src={'/images/check-mark.png'} alt={''}></Image>
-                    {detail}
+                    {detail.title}
                   </li>
                 ))}
               </ul>
@@ -52,7 +56,7 @@ const SolutionOverview = ({ solution }: Props) => {
                 {item.details.map((detail, index) => (
                   <li key={index} className='flex text-lg gap-2 items-center'>
                     <Image height={30} width={30} src={'/images/check-mark.png'} alt={''}></Image>
-                    {detail}
+                    {detail.title}
                   </li>
                 ))}
               </ul>
