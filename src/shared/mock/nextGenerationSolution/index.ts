@@ -33,7 +33,8 @@ export const MetaData = [
                 description: "Hệ thống quản lý hoạt động chuỗi Spa Sen Bách Diệp",
                 image: "/images/SuccessPj.png"
             }
-        ]
+        ],
+        link: "/solution/detail1"
     },
     {
         key: 1,
@@ -61,7 +62,8 @@ export const MetaData = [
                 description: "Hệ thống định giá bất động sản, dự án đầu tư, doanh nghiệp, tài sản hữu hình, tài sản vô hình,... của SBA.",
                 image: "/images/SuccessPj1.png"
             }
-        ]
+        ],
+        link: "/solution/detail2"
     },
     {
         key: 2,
@@ -87,9 +89,10 @@ export const MetaData = [
             {
                 title: "Dự án trung tâm Luna English",
                 description: "Ứng dụng học Tiếng Anh của trung tâm Luna English.",
-                image: "/images/SuccessPj3.png"
+                image: "/images/SuccessPj2.png"
             }
-        ]
+        ],
+        link: "/solution/detail3"
     },
     {
         key: 3,
@@ -115,23 +118,24 @@ export const MetaData = [
             {
                 title: "Dự án website tin tức thể thao The cup",
                 description: "The cup là website cung cấp các tin tức thể thao.",
-                image: "/images/SuccessPj4.png"
+                image: "/images/SuccessPj3.png"
             },
             {
                 title: "Dự án audio book Happy station",
                 description: "Ứng dụng sách nói độc quyền thuộc tủ sách Happy Live, ngoài ra còn có khóa học cùng nhiều podcast giá trị.",
-                image: "/images/SuccessPj5.png"
+                image: "/images/SuccessPj4.png"
             },
             {
                 title: "Dự án hệ thống xếp hạng golf VJGR",
                 description: "Hệ thống quản lý và xếp hạng golf cho các vận động viên thanh thiếu niên Việt Nam (Vietnam Junior Golf Ranking).",
-                image: "/images/SuccessPj6.png"
+                image: "/images/SuccessPj5.png"
             },
             {
                 title: "Ứng dụng cho khách hàng Sen Bách Diệp",
                 description: "Ứng dụng dành cho khách hàng của Sen Bách Diệp thực hiện đặt lịch, mua sản phẩm & dịch vụ, tìm kiếm chương trình khuyến mãi,....",
-                image: "/images/SuccessPj7.png"
+                image: "/images/SuccessPj6.png"
             },
-        ]
+        ],
+        link: "/solution/detail4"
     },
 ]

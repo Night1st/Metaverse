@@ -38,7 +38,7 @@ const InfoCard = ({ title, icon }: Props) => {
       <div className="flex flex-col justify-center text-center items-center gap-10">
         <h1 className="text-2xl">{title}</h1>
         {/* <p>{description}</p> */}
-        <BtnFindOut />
+        <BtnFindOut link={""}/>
       </div>
     </motion.div>
   );

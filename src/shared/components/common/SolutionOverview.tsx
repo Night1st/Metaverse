@@ -1,19 +1,26 @@
 import React from 'react';
 import Image from 'next/image';
 import BtnFindOut from './BtnFindOut';
-import SuccessProject from './SuccessProject';
 
 export interface Solution {
   key: number;
   title: string;
   description: string;
-  details: SolutionDetail[];
+  details: SolutionDetails[];
+  successProject: SuccessPj[],
   image: string;
+  link: string;
 }
 
-interface SolutionDetail {
+interface SolutionDetails {
   title: string,
   description: string
+}
+
+interface SuccessPj {
+  title: string,
+  description: string,
+  image: string
 }
 
 interface Props {
@@ -38,7 +45,7 @@ const SolutionOverview = ({ solution }: Props) => {
                   </li>
                 ))}
               </ul>
-              <BtnFindOut text="Dự án thành công"/>
+              <BtnFindOut text="Dự án thành công" link={item.link}/>
             </div>
             <div className='flex justify-center items-center px-10 py-10'>
               <Image className='' height={300} width={300} src={item.image} alt={''}></Image>
@@ -60,12 +67,12 @@ const SolutionOverview = ({ solution }: Props) => {
                   </li>
                 ))}
               </ul>
-              <BtnFindOut text="Dự án thành công"/>
+              <BtnFindOut text="Dự án thành công" link={item.link}/>
             </div>
           </div>
-        ),
+        )
+        
       )}
-      <SuccessProject/>
     </section>
   );
 };
