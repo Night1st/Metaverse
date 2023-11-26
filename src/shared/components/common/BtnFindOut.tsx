@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 interface Props {
   text?: string;
   cls?: any;
-  link: string
+  link?: string
 }
 
 const BtnFindOut = ({ cls, text, link }: Props) => {
