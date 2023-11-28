@@ -1,7 +1,22 @@
 export const fakeMenu = [
-    "Trang chủ",
-    "Giải pháp",
-    "Về chúng tôi",
-    "Tin tức",
-    "Tuyển dụng",
+    {
+        title: "Trang chủ",
+        link: "/"
+    },
+    {
+        title: "Giải pháp",
+        link: "/solution"
+    },
+    {
+        title: "Về chúng tôi",
+        link: "/contact"
+    },
+    {
+        title: "Tin tức",
+        link: ""
+    },
+    {
+        title: "Tuyển dụng",
+        link: ""
+    }
 ];

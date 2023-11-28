@@ -1,8 +1,6 @@
 import { fakeMenu } from "@/shared/mock/menu";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { PreImage } from "../../common/PreImage";
-import logo from "../../../../../public/logo.svg";
 import { Bungee } from 'next/font/google'
 
 const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
@@ -45,8 +43,8 @@ const Header = () => {
       <div className="flex justify-center items-center gap-10">
         <ul className="justify-center items-cente gap-10 hidden lg:flex ml-10">
             {fakeMenu.map((item, inx) => (
-              <Link href={"#"} key={inx}>
-                <li>{item}</li>
+              <Link href={item.link} key={inx}>
+                <li>{item.title}</li>
               </Link>
             ))}
         </ul>
