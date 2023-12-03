@@ -28,18 +28,18 @@ const WhyUs = ({ data }: Props) => {
   };
   return (
     <>
-      <section className='mx-auto px-32 py-10'>
+      <section className='mx-auto px-32 py-10 bg-[rgb(230,234,239,0.5)]'>
         <div className='w-full flex flex-col justify-around items-center text-center'>
           <TitleSection title='VỀ CHÚNG TÔI' description=''/>
           <div className='flex items-center justify-between gap-10 py-5'>
             {data.map((item, index) => (
               <button
                 key={index}
-                className={`${item == selectedIcon && "bg-[#1B3864] text-white transition duration-750 ease-in-out"} relative flex justify-between items-center text-black text-left py-4 px-4 rounded-full cursor-pointer`}
+                className={`${item == selectedIcon && "bg-[#1B3864] text-white transition duration-750 ease-in-out"} relative flex justify-center items-center text-black text-left py-4 px-4 rounded-full cursor-pointer w-48`}
                 style={{ border: "1px solid #000" }}
                 onClick={() => setSelectedIcon(item)}
               >
-                {`${item.title}`}
+                <p className='text-2xl text-center'>{`${item.title}`}</p>
               </button>
             ))}
           </div>

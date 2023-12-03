@@ -12,12 +12,13 @@ export interface Data {
 
 interface Props {
   data: Data;
+  text: string
 }
-const Banner = ({ data }: Props) => {
+const Banner = ({ data, text }: Props) => {
   return (
       <div className="snap-x-mandatory bottom-24 scrollbar-none relative flex overflow-hidden text-white rounded-lg">
         <div className="w-full flex justify-between items-center mx-auto">
-        <ContentBanner data={data} />
+        <ContentBanner data={data} text={text}/>
         </div>
       </div>
 

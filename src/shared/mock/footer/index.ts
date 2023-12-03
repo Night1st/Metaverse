@@ -15,5 +15,23 @@ export const footerData = {
     ],
     service: ["Quản lý doanh nghiệp", "Định giá tài sản", "Giáo dụng trực tuyến", "Ứng dụng trong giải trí"],
     aboutUs: ["Về chúng tôi", "Tin tức", "Tuyển dụng"],
-    support: ["FAQ", "Liên hệ Metaverse", "Điều khoản sử dụng"]
+    support: ["FAQ", "Liên hệ Metaverse", "Điều khoản sử dụng"],
+    icon: [
+        {
+            title: "Facebook",
+            icon: "/images/FacebookIcon.png"
+        },
+        {
+            title: "LinkedIn",
+            icon: "/images/LinkedInIcon.png"
+        },
+        {
+            title: "Youtube",
+            icon: "/images/YoutubeIcon.png"
+        },
+        {
+            title: "Zalo",
+            icon: "/images/ZaloIcon.png"
+        },
+    ]
 }

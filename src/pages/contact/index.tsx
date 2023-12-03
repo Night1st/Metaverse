@@ -19,7 +19,7 @@ export function Contact() {
         <meta name="description" content="Liên hệ" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
         </Head>
-        <Banner data={contactData}/>
+        <Banner data={contactData} text="Kết nối Metaverse"/>
         <ContactInfo/>
         <ConnectForm/>
     </>)

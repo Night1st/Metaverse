@@ -13,6 +13,12 @@ const Footer = () => {
           <div className={bungee.className}>
             <p className="text-4xl">METAVERSE</p>
           </div>
+          <div className="flex gap-3 py-2">
+            {footerData.icon.map((item, idx) => (
+              <Image key={idx} height={30} width={30} src={item.icon} alt={''}></Image>
+            ))}
+          </div>
+            
             {footerData.contactData.map((item, idx) => (
               <p key={idx} className="flex items-start gap-2">
                 <Image height={30} width={30} src={item.icon} alt={''}></Image>

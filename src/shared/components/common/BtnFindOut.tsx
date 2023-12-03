@@ -4,15 +4,16 @@ import { useRouter } from "next/router";
 
 interface Props {
   text?: string;
-  cls?: any;
-  link?: string
+  link: string;
+  color: string;
+  colorHover: string
 }
 
-const BtnFindOut = ({ cls, text, link }: Props) => {
+const BtnFindOut = ({ text, link, color, colorHover }: Props) => {
   const router = useRouter()
   const buttonVariants = {
     hover: {
-      backgroundColor: "var(--blue-color-600)",
+      backgroundColor: colorHover,
       width: "100%",
       opacity: 0.3      
     },
@@ -20,10 +21,9 @@ const BtnFindOut = ({ cls, text, link }: Props) => {
 
   return (
     <motion.button
-      initial={{ backgroundColor: "var(--blue-color-400)" }}
       whileHover="hover"
-      className={`bg-[var(--blue-color-400)] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer mt-3 ${cls}`}
-      onClick={() => router.push('/solution/detail1')}
+      className={`bg-[${color}] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer mt-3`}
+      onClick={() => router.push(link)}
     >
       <p className="text-sm">{text ? text : "Tìm hiểu thêm"}</p>
       <IconLineDirection  color="#000" />

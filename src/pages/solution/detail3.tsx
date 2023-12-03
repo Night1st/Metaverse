@@ -25,7 +25,7 @@ export function SolutionDetail1({solution}: Props) {
         <meta name="description" content="Giải pháp Metaverse" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
         </Head>
-        <Banner data={solutionData}/>
+        <Banner data={solutionData} text="Dự án thành công"/>
         <SolutionDetail solution={MetaData} id={2}/>
         <SuccessProject solution={MetaData} id={2}/>
         <ConnectForm/>

@@ -2,12 +2,13 @@ import { fakeMenu } from "@/shared/mock/menu";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Bungee } from 'next/font/google'
+import { useRouter } from "next/router";
 
 const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const router = useRouter()
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop =
@@ -48,7 +49,9 @@ const Header = () => {
               </Link>
             ))}
         </ul>
-        <button className="bg-[white] text-black font-bold py-2 px-4 rounded cursor-pointer hidden lg:block">
+        <button 
+          className="bg-[white] text-black font-bold py-2 px-4 rounded cursor-pointer hidden lg:block" 
+          onClick={() => router.push('/contact')}>
           Liên hệ
         </button>
       </div>

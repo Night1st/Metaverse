@@ -22,7 +22,7 @@ export function Home() {
         <meta name="description" content="Trang chủ NGS" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
       </Head>
-      <Banner data={homeData} />
+      <Banner data={homeData} text="Tìm hiểu thêm"/>
       <NextGenerationSolution />
       <WhyUs data={WhyUsData}/>
       <Testimonial />

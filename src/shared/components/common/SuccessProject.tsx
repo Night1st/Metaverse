@@ -10,7 +10,7 @@ interface Props {
 
 const SuccessProject = ({solution, id}: Props) => {
     return (
-        <section className="px-32 bg-[#E6EAEF] py-2">
+        <section className="px-32 bg-[#E6EAEF] py-10">
           <TitleSection
             title="DỰ ÁN THÀNH CÔNG"
             description="Một số dự án tiêu biểu của Metaverse"

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import BtnFindOut from './BtnFindOut';
+import { motion } from 'framer-motion';
+import router from 'next/router';
+import IconLineDirection from '../icon/IconLineDirection';
 
 const data = [
     "Quản lý doanh nghiệp",
@@ -10,6 +13,7 @@ const data = [
 ]
 
 const ConnectForm = () => {
+  const [selectedIcon, setSelectedIcon] = useState<string>('');
   return (
     <>
       <section className='mx-auto px-32 py-10'>
@@ -62,8 +66,9 @@ const ConnectForm = () => {
                     {data.map((item, index) => (
                         <button
                             key={index}
-                            className={`justify-between items-center py-3 px-3 rounded-full cursor-pointer`}
+                            className={`${item == selectedIcon && "bg-[white] text-black transition duration-750 ease-in-out"} justify-between items-center py-3 px-3 rounded-full cursor-pointer`}
                             style={{ border: "1px solid #fff" }}
+                            onClick={() => setSelectedIcon(item)}
                         >{`${item}`}</button>
                     ))}
                 </div>
@@ -75,7 +80,21 @@ const ConnectForm = () => {
                 />
               </div>
               <div className='mb-4 flex justify-end'>
-                <BtnFindOut text='Kết nối'/>
+              <motion.button
+                whileHover="hover"
+                className={`bg-[white] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer mt-3`}
+                onClick={() => router.push('')}
+              >
+                <p className="text-sm">{"Kết nối"}</p>
+                <IconLineDirection  color="#000" />
+                <motion.div
+                  className="absolute left-0 top-0 h-full w-0"
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  }}
+                ></motion.div>
+              </motion.button>
               </div>
             </div>
           </div>
