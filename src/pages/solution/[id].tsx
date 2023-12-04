@@ -20,7 +20,7 @@ export function Solution() {
         <meta name="description" content="Giải pháp Metaverse" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
         </Head>
-        <Banner data={solutionData}/>
+        <Banner data={solutionData} text=""/>
         <SolutionDetail solution={MetaData} id={0}/>
         <SuccessProject solution={MetaData} id={0}/>
         <ConnectForm/>
