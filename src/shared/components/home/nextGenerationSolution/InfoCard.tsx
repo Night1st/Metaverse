@@ -43,7 +43,7 @@ const InfoCard = ({ title, icon, link }: Props) => {
         <motion.button
           whileHover="hover"
           className={`bg-[#1B3864] relative flex justify-between items-center gap-3 text-white text-left py-4 px-4 rounded cursor-pointer mt-3`}
-          onClick={() => router.push('')}
+          onClick={() => router.push(link)}
         >
           <p className="text-sm">{"TÌm hiểu thêm"}</p>
           <IconLineDirection  color="#fff" /> 

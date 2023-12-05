@@ -50,7 +50,7 @@ const Header = () => {
             ))}
         </ul>
         <button 
-          className="bg-[white] text-black font-bold py-2 px-4 rounded cursor-pointer hidden lg:block" 
+          className="bg-[white] text-black font-bold py-2 px-4 rounded-full cursor-pointer hidden lg:block" 
           onClick={() => router.push('/contact')}>
           Liên hệ
         </button>

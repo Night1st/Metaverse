@@ -77,7 +77,7 @@ const WhyUs = ({ data }: Props) => {
               ></motion.div>
             </motion.button>
           </div>
-            <div className='w-1/2 grid grid-cols-4 justify-center items-center py-5 gap-10'>
+            <div className='w-1/2 grid grid-cols-4 justify-center py-5 gap-10'>
               <div className='flex flex-col'>
                 <p className='text-5xl text-[#1B3864]'>+05</p>
                 <h1 className='text-2xl py-3'>năm hình thành và phát triển</h1>

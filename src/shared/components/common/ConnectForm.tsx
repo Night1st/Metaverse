@@ -4,6 +4,7 @@ import BtnFindOut from './BtnFindOut';
 import { motion } from 'framer-motion';
 import router from 'next/router';
 import IconLineDirection from '../icon/IconLineDirection';
+import Modal from './Modal';
 
 const data = [
     "Quản lý doanh nghiệp",
@@ -14,11 +15,12 @@ const data = [
 
 const ConnectForm = () => {
   const [selectedIcon, setSelectedIcon] = useState<string>('');
+  const [open, setOpen] = useState(false)
   return (
     <>
       <section className='mx-auto px-32 py-10'>
         <div className='bg-[#1B3864] p-5 justify-around items-center rounded-lg'>
-          <h1 className='text-center text-white text-5xl'>Kết nối với Metaverse</h1>
+          <h1 className='text-center text-white text-4xl'>Kết nối với Metaverse</h1>
           <div className='grid grid-cols-2 gap-4 py-10 justify-between text-white'>
             <div className='flex flex-col justify-center text-center'>
               <p>Hãy nói cho Metaverse những gì bạn cần, chúng tôi sẽ liên hệ lại sớm nhất</p>
@@ -80,21 +82,20 @@ const ConnectForm = () => {
                 />
               </div>
               <div className='mb-4 flex justify-end'>
-              <motion.button
-                whileHover="hover"
+              <button
                 className={`bg-[white] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer mt-3`}
-                onClick={() => router.push('')}
+                onClick={() => setOpen(true)}
               >
                 <p className="text-sm">{"Kết nối"}</p>
                 <IconLineDirection  color="#000" />
-                <motion.div
-                  className="absolute left-0 top-0 h-full w-0"
-                  transition={{
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  }}
-                ></motion.div>
-              </motion.button>
+              </button>
+              <Modal open={open} onClose={() => setOpen(false)}>
+                  <div className='text-center w-full flex flex-col gap-5'>
+                    <h1 className='text-4xl text-black pt-10'>Kết nối thành công</h1>
+                    <p className="text-2xl text-black">Bạn đã kết nối với Metaverse thành công. Chúng tôi sẽ liên hệ với bạn sớm nhất.</p>
+                    <Image className='ml-auto mr-auto py-10' height={400} width={400} src={'/images/ConnectSuccess.png'} alt={''} />
+                  </div>
+              </Modal>
               </div>
             </div>
           </div>
