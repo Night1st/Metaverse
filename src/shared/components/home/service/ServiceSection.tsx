@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Bungee } from 'next/font/google'
 
 interface Props {
   item: any;
   idx: number;
 }
-
-const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
 
 const ServiceSection = ({ item, idx }: Props) => {
   const [isHovered, setIsHovered] = useState(false);

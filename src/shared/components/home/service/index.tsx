@@ -15,7 +15,7 @@ const Service = () => {
       />
       <div className="w-full flex items-start justify-center">
         <AnimatePresence>
-        <div className="w-1/2 flex flex-col justify-center items-center mt-10">
+        <div className="flex flex-col justify-center items-center mt-10">
           {NGSDataService.map((item, idx) => {
             return <ServiceSection key={idx} item={item} idx={idx} />;
           })}
