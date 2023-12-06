@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import router from 'next/router';
 import IconLineDirection from '../icon/IconLineDirection';
 import Modal from './Modal';
+import IconArrowRight from '../icon/IconArrowRight';
 
 const data = [
     "Quản lý doanh nghiệp",
@@ -87,7 +88,7 @@ const ConnectForm = () => {
                 onClick={() => setOpen(true)}
               >
                 <p className="text-sm">{"Kết nối"}</p>
-                <IconLineDirection  color="#000" />
+                <IconArrowRight  color="#000" />
               </button>
               <Modal open={open} onClose={() => setOpen(false)}>
                   <div className='text-center w-full flex flex-col gap-5'>

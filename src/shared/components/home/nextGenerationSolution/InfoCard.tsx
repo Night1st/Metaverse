@@ -4,6 +4,7 @@ import { useState } from "react";
 import BtnFindOut from "../../common/BtnFindOut";
 import router from "next/router";
 import IconLineDirection from "../../icon/IconLineDirection";
+import IconArrowRight from "../../icon/IconArrowRight";
 
 interface Props {
   title: string;
@@ -46,7 +47,7 @@ const InfoCard = ({ title, icon, link }: Props) => {
           onClick={() => router.push(link)}
         >
           <p className="text-sm">{"TÌm hiểu thêm"}</p>
-          <IconLineDirection  color="#fff" /> 
+          <IconArrowRight  color="#fff" /> 
           <motion.div
             className="absolute left-0 top-0 h-full w-0"
             transition={{

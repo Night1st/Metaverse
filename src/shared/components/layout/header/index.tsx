@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Bungee } from 'next/font/google'
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
 
@@ -53,6 +54,13 @@ const Header = () => {
           className="bg-[white] text-black font-bold py-2 px-4 rounded-full cursor-pointer hidden lg:block" 
           onClick={() => router.push('/contact')}>
           Liên hệ
+        </button>
+        <button 
+          className="bg-[white] text-black font-bold py-2 px-4 rounded-full cursor-pointer flex justify-center items-center" 
+          
+          >
+            <Image className="mr-2" height={20} width={20} src={"/images/VN.png"} alt={""}/>
+            <p>VN</p>
         </button>
       </div>
       <div className="block md:hidden">...</div>

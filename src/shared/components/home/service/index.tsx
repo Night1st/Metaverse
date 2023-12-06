@@ -5,6 +5,7 @@ import ServiceSection from "./ServiceSection";
 import { AnimatePresence, motion } from "framer-motion";
 import router from "next/router";
 import IconLineDirection from "../../icon/IconLineDirection";
+import IconArrowRight from "../../icon/IconArrowRight";
 
 const Service = () => {
   return (
@@ -29,7 +30,7 @@ const Service = () => {
           onClick={() => router.push('')}
         >
           <p className="text-sm">{"Tìm hiểu thêm "}</p>
-          <IconLineDirection  color="#fff" />
+          <IconArrowRight  color="#fff" />
           <motion.div
             className="absolute left-0 top-0 h-full w-0"
             transition={{

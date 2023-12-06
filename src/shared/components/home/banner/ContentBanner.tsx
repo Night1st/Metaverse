@@ -4,6 +4,7 @@ import BtnFindOut from "../../common/BtnFindOut";
 import { Bungee } from 'next/font/google'
 import router from "next/router";
 import IconLineDirection from "../../icon/IconLineDirection";
+import IconArrowRight from "../../icon/IconArrowRight";
 export const staggerChildren = {
   animate: {
     transition: {
@@ -56,7 +57,7 @@ const ContentBanner = ({ data, text, handleClick }: Props) => {
         onClick={handleClick}
       >
         <p className="text-sm">{text}</p>
-        <IconLineDirection  color="#fff" />
+        <IconArrowRight  color="#fff" />
         <motion.div
           className="absolute left-0 top-0 h-full w-0"
           transition={{

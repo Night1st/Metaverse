@@ -4,6 +4,7 @@ import BtnFindOut from './BtnFindOut';
 import { motion } from 'framer-motion';
 import router from 'next/router';
 import IconLineDirection from '../icon/IconLineDirection';
+import IconArrowRight from '../icon/IconArrowRight';
 
 export interface Solution {
   key: number;
@@ -70,7 +71,7 @@ const SolutionOverview = ({ solution, handleClick }: Props) => {
                 onClick={() => router.push(item.link)}
               >
                 <p className="text-sm">{"Dự án thành công"}</p>
-                <IconLineDirection  color="#1B3864" />
+                <IconArrowRight  color="#1B3864" />
                 <motion.div
                   className="absolute left-0 top-0 h-full w-0"
                   transition={{
@@ -122,7 +123,7 @@ const SolutionOverview = ({ solution, handleClick }: Props) => {
                 onClick={() => router.push(item.link)}
               >
                 <p className="text-sm">{"Dự án thành công"}</p>
-                <IconLineDirection  color="#1B3864" />
+                <IconArrowRight  color="#1B3864" />
                 <motion.div
                   className="absolute left-0 top-0 h-full w-0"
                   transition={{
