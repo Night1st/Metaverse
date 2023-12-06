@@ -5,6 +5,7 @@ import SolutionOverview from "@/shared/components/common/SolutionOverview";
 import { MetaData } from "@/shared/mock/nextGenerationSolution";
 import Banner from "@/shared/components/home/banner";
 import ContactInfo from "@/shared/components/home/contactInfo";
+import { useRef } from "react";
 
 const contactData = {
     title: "LIÊN HỆ",
@@ -13,15 +14,21 @@ const contactData = {
 }
 
 export function Contact() {
+    const ref = useRef<HTMLDivElement>(null)
+    const handleClick = () => {
+      ref.current?.scrollIntoView({behavior: 'smooth'})
+    }
     return (<>
         <Head>
         <title>Liên hệ</title>
         <meta name="description" content="Liên hệ" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
         </Head>
-        <Banner data={contactData} text="Kết nối Metaverse"/>
+        <Banner data={contactData} text="Kết nối Metaverse" handleClick={handleClick}/>
         <ContactInfo/>
-        <ConnectForm/>
+        <div ref={ref}>
+            <ConnectForm/>
+        </div>
     </>)
 }
 

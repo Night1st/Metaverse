@@ -4,6 +4,7 @@ import LayoutWebsite from "@/shared/components/layout/LayoutWebsite";
 import SolutionOverview from "@/shared/components/common/SolutionOverview";
 import { MetaData } from "@/shared/mock/nextGenerationSolution";
 import Banner from "@/shared/components/home/banner";
+import { useRef } from "react";
 
 const solutionData = {
     title: "GIẢI PHÁP",
@@ -12,6 +13,10 @@ const solutionData = {
   }
 
 export function Solution() {
+  const ref = useRef<HTMLDivElement>(null)
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'})
+  }
     return (<>
         <Head>
         <title>Giải pháp Metaverse</title>
@@ -19,8 +24,10 @@ export function Solution() {
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
         </Head>
         <Banner data={solutionData} text=""/>
-        <SolutionOverview solution={MetaData}/>
-        <ConnectForm/>
+        <SolutionOverview solution={MetaData} handleClick={handleClick}/>
+        <div ref={ref}>
+          <ConnectForm/>
+        </div>
     </>)
 }
 

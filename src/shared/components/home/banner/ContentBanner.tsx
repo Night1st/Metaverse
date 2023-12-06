@@ -29,10 +29,11 @@ export const wordAnimation = {
 };
 interface Props {
   data: Data;
-  text: string
+  text: string;
+  handleClick?: any
 }
 const bungee = Bungee({ subsets: ["latin-ext"], display: 'swap', weight: ['400'] })
-const ContentBanner = ({ data, text }: Props) => {
+const ContentBanner = ({ data, text, handleClick }: Props) => {
   const src = data.image
   return (
     <div style={{backgroundImage: `url(${src})`}} className={`w-full flex min-h-screen flex-col justify-center items-center leading-[90%] tracking-wide bg-cover lg:left-0 lg:px-16 lg:items-start`}>
@@ -52,7 +53,7 @@ const ContentBanner = ({ data, text }: Props) => {
       <motion.button
         whileHover="hover"
         className={`bg-[#1B3864] relative flex justify-between items-center gap-3 text-white text-left py-4 px-4 rounded cursor-pointer mt-3`}
-        onClick={() => router.push('')}
+        onClick={handleClick}
       >
         <p className="text-sm">{text}</p>
         <IconLineDirection  color="#fff" />

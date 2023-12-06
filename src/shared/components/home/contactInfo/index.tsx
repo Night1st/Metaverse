@@ -16,7 +16,7 @@ const ContactInfo = () => {
             </div>
             <div className='w-2/3 flex flex-col gap-10 px-10 py-10'>
                 {footerData.contactData.map((item, idx) => (
-                    <ContactInfoCard key={idx} title={item.title} icon={item.icon} />
+                    <ContactInfoCard key={idx} head={item.head} title={item.title} icon={item.icon} />
                 ))}
             </div>
           </div>

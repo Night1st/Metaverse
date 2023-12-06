@@ -28,9 +28,10 @@ interface SuccessPj {
 
 interface Props {
   solution: Solution[];
+  handleClick: any
 }
 
-const SolutionOverview = ({ solution }: Props) => {
+const SolutionOverview = ({ solution, handleClick }: Props) => {
   //const [solutionTab, setSolutionTab] = useState<Solution>(solution[0] as Solution);
   return (
     <section className='mx-auto px-32'>
@@ -52,7 +53,7 @@ const SolutionOverview = ({ solution }: Props) => {
               <motion.button
                 whileHover="hover"
                 className={`bg-[#1B3864] relative flex justify-center items-center gap-3 text-white text-left py-4 px-4 rounded cursor-pointer mt-3 w-60`}
-                
+                onClick={handleClick}
               >
                 <p className="text-sm">{"Kết nối Metaverse"}</p>
                 <motion.div
@@ -104,7 +105,7 @@ const SolutionOverview = ({ solution }: Props) => {
               <motion.button
                 whileHover="hover"
                 className={`bg-[#1B3864] relative flex justify-center items-center gap-3 text-white text-left py-4 px-4 rounded cursor-pointer mt-3 w-60`}
-                
+                onClick={handleClick}
               >
                 <p className="text-sm">{"Kết nối Metaverse"}</p>
                 <motion.div
