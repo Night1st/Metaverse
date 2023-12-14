@@ -1,37 +1,33 @@
 import express from 'express';
-import https from 'https';
-import fs from 'fs';
 import next from 'next';
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
-const handle = app.getRequestHandler();
+const app2 = next({ dev });
+const handle2 = app2.getRequestHandler();
 
-const httpPort = 3001;
-const httpsPort = 443; // Port for HTTPS
+const proxyPort = 3333;
 
-app.prepare().then(() => {
+app2.prepare().then(() => {
   const server = express();
 
-  // Define the paths you want to handle with Next.js
+  // Define the paths you want to handle with Next.js for the second app
   server.all('*', (req, res) => {
-    return handle(req, res);
+    return handle2(req, res);
   });
 
-  // Read the SSL certificate and key files
   const httpsOptions = {
-    key: fs.readFileSync('/etc/letsencrypt/live/chopconfirm.sg/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/chopconfirm.sg/fullchain.pem'),
+    key: fs.readFileSync('/etc/letsencrypt/live/vjgr.com.vn/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/vjgr.com.vn/fullchain.pem'),
   };
 
   https.createServer(httpsOptions, server).listen(httpsPort, () => {
-    console.log(`HTTPS server is running on port ${httpsPort}`);
+    console.log(`HTTPS server for App 1 is running on port ${httpsPort}`);
   }).on('error', (err) => {
     if (err) throw err;
   });
 
-  server.listen(httpPort, () => {
-    console.log(`HTTP server is running on port ${httpPort}`);
+  server.listen(proxyPort, () => {
+    console.log(`Proxy server for App 2 is running on port ${proxyPort}`);
   }).on('error', (err) => {
     if (err) throw err;
   });
