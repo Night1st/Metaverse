@@ -1,12 +1,11 @@
 import { IWhyUsData, WhyUsData } from '@/shared/mock/whyUs';
 import { useState } from 'react';
-import TextHighLight from '../../common/TextHighLight';
 import ContentWhyUs from './ContentWhyUs';
-import IconNGS from './IconNGS';
 import { motion } from 'framer-motion';
 import IconArrowLeft from '../../icon/IconArrowLeft';
 import IconArrowRight from '../../icon/IconArrowRight';
 import TitleSection from '../../common/TitleSection';
+import React from 'react';
 
 interface Props {
   data: IWhyUsData[];
@@ -27,30 +26,30 @@ const WhyUs = ({ data }: Props) => {
     });
   };
   return (
-    <>
-      <section className='mx-auto px-32 py-10 bg-[rgb(230,234,239,0.5)]'>
-        <div className='w-full flex flex-col justify-around items-center text-center'>
-          <TitleSection title='VỀ CHÚNG TÔI' description=''/>
-          <div className='flex items-center justify-between gap-10 py-5'>
+    <React.Fragment>
+      <section className='w-full py-4 md:py-8 lg:py-10 xl:py-24 bg-aboutUs-fade'>
+        <div className='max-w-[1440px] grid grid-cols-1 justify-center items-center gap-5 mx-auto px-4 md:px-12 lg:px-24'>
+          <TitleSection title='VỀ CHÚNG TÔI' description='' />
+          <div className='relative w-full mb-16 mx-auto flex flex-col md:flex-row items-center justify-center gap-10'>
             {data.map((item, index) => (
               <button
                 key={index}
-                className={`${item == selectedIcon && "bg-[#1B3864] text-white transition duration-750 ease-in-out"} relative flex justify-center items-center text-black text-left py-4 px-4 rounded-full cursor-pointer w-48`}
-                style={{ border: "1px solid #000" }}
+                className={`${
+                  item == selectedIcon ? 'bg-[#1B3864] text-white transition duration-750 ease-in-out' : 'bg-white'
+                } relative flex justify-center items-center text-black text-left py-4 px-4 rounded-full cursor-pointer w-48`}
+                style={{ border: '1px solid #000' }}
                 onClick={() => setSelectedIcon(item)}
               >
                 <p className='text-2xl text-center'>{`${item.title}`}</p>
               </button>
             ))}
+            <div className='w-2/3 border border-[#1B3864] absolute z-[-10] hidden md:block'></div>
           </div>
-          <div className='w-full flex justify-center items-center gap-10'>
-            {/* <div className='w-full z-40 float-right'>
-              <IconNGS selectedIcon={selectedIcon && selectedIcon} setSelectedIcon={setSelectedIcon} />
-            </div> */}
+          <div className='w-full mb-16 flex justify-center items-center gap-10'>
             <motion.button
               initial={{ backgroundColor: 'var(--blue-color-400)' }}
               whileHover='hover'
-              className={`bg-[var(--blue-color-400)] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer`}
+              className={`bg-[var(--blue-color-400)] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 cursor-pointer rounded-xl`}
             >
               <IconArrowLeft onClick={handlePrev} />
               <motion.div
@@ -65,7 +64,7 @@ const WhyUs = ({ data }: Props) => {
             <motion.button
               initial={{ backgroundColor: 'var(--blue-color-400)' }}
               whileHover='hover'
-              className={`bg-[var(--blue-color-400)] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded cursor-pointer`}
+              className={`bg-[var(--blue-color-400)] relative flex justify-between items-center gap-3 text-black text-left py-4 px-4 rounded-xl cursor-pointer`}
             >
               <IconArrowRight onClick={handleNext} />
               <motion.div
@@ -77,27 +76,27 @@ const WhyUs = ({ data }: Props) => {
               ></motion.div>
             </motion.button>
           </div>
-            <div className='w-1/2 grid grid-cols-4 justify-center py-5 gap-10'>
-              <div className='flex flex-col'>
-                <p className='text-5xl text-[#1B3864]'>+05</p>
-                <h1 className='text-2xl py-3'>năm hình thành và phát triển</h1>
-              </div>
-              <div className='flex flex-col'>
-                <p className='text-5xl text-[#1B3864]'>+10</p>
-                <h1 className='text-2xl py-3'>nhân sự</h1>
-              </div>
-              <div className='flex flex-col'>
-                <p className='text-5xl text-[#1B3864]'>+15</p>
-                <h1 className='text-2xl py-3'>khách hàng</h1>
-              </div>
-              <div className='flex flex-col'>
-                <p className='text-5xl text-[#1B3864]'>+20</p>
-                <h1 className='text-2xl py-3'>dự án thành công</h1>
-              </div>
+          <div className='w-full grid grid-cols-1 md:grid-cols-4 gap-10 justify-start items-start mt-5'>
+            <div className='border-card-aboutUs flex flex-col justify-start items-center text-center pr-6'>
+              <p className='text-5xl text-[#1B3864]'>+05</p>
+              <h1 className='text-2xl py-3'>năm hình thành và phát triển</h1>
             </div>
+            <div className='border-card-aboutUs flex flex-col justify-start items-center pr-6'>
+              <p className='text-5xl text-[#1B3864]'>+10</p>
+              <h1 className='text-2xl py-3'>nhân sự</h1>
+            </div>
+            <div className='border-card-aboutUs flex flex-col justify-start items-center pr-6'>
+              <p className='text-5xl text-[#1B3864]'>+15</p>
+              <h1 className='text-2xl py-3'>khách hàng</h1>
+            </div>
+            <div className='border-card-aboutUs flex flex-col justify-start items-center pr-6'>
+              <p className='text-5xl text-[#1B3864]'>+20</p>
+              <h1 className='text-2xl py-3'>dự án thành công</h1>
+            </div>
+          </div>
         </div>
       </section>
-    </>
+    </React.Fragment>
   );
 };
 

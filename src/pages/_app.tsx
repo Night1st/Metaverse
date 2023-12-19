@@ -6,9 +6,9 @@ import { ReactElement } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import LayoutWebsite from "@/shared/components/layout/LayoutWebsite";
 import Head from "next/head";
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const interText = Inter({ subsets: ["vietnamese"], display: 'swap', weight: ['500', '600', '700', '800', '900'] })
+const interText = Roboto({ subsets: ["vietnamese"], display: 'swap', weight: ['400', '500', '700', '300', '900'] })
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => React.ReactNode;

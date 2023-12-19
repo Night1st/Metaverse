@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./business-color.css";
-
+@import './business-color.css';
 
 * {
   box-sizing: border-box;
@@ -37,8 +36,6 @@ body {
   }
 }
 
-
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -53,4 +50,28 @@ body {
 
 .overflow-strategies::-webkit-scrollbar {
   width: 0;
+}
+.bg-care-fade {
+  background: radial-gradient(70.87% 56.61% at 50% 50%, rgba(81, 107, 148, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.bg-aboutUs-fade {
+  background: linear-gradient(180deg, rgba(230, 234, 239, 0.2) 50%, rgba(230, 234, 239, 0.2) 100%),
+    linear-gradient(180deg, #e6eaef 0%, rgba(230, 234, 239, 0) 50%);
+}
+
+.bgDefaultInforCard {
+  background-color: #fff;
+  color: #000;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.bgHoverInforCard {
+  background: linear-gradient(146.05deg, #1b3864 0%, #e6eaef 100%);
+  color: #fff;
+}
+
+.border-card-aboutUs {
+  border-right: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #516b94, rgba(0, 0, 0, 0)) 1 100%;
 }
