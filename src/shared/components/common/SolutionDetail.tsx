@@ -8,7 +8,7 @@ interface Props {
 
 const SolutionDetail = ({solution, id}: Props) => {
     return (
-        <section className='mx-auto px-32 pb-5'>
+        <section className='max-w-[1440px] mx-auto pb-4 md:pb-8 lg:pb-10 xl:pb-24'>
             <div className='grid grid-cols-1 lg:grid-cols-2 justify-start bg-[white]'>
                 <div className='flex flex-col gap-3 px-5 py-5'>
                     <h1 className='text-[#1B3864] text-4xl '>{"Tại sao nên chọn Metaverse?"}</h1>
