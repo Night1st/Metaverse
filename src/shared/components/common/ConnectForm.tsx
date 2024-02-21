@@ -50,7 +50,7 @@ const ConnectForm = () => {
             </div>
             <div className='mb-4'>
               <label className='block text-lg font-bold'>Điều bạn quan tâm</label>
-              <div className='gap-3 py-5 flex'>
+              <div className='gap-3 py-5 flex flex-wrap'>
                 {data.map((item, index) => (
                   <button
                     key={index}

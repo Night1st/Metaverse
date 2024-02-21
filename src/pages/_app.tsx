@@ -36,8 +36,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <main className={interText.className}>
       <Head>
-        <title>Website NGS</title>
-        <meta name="description" content="Website NGS" />
+        <title>Metaverse</title>
+        <meta name="description" content="Metaverse" />
         <meta name="keywords" content="Công nghệ thông tin, Giải pháp số" />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

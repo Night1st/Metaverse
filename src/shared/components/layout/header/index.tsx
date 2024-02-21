@@ -4,10 +4,13 @@ import { useEffect, useState } from 'react';
 import { Bungee } from 'next/font/google';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import IconMenu from '../../icon/IconMenu';
+import IconClose from '../../icon/IconClose';
 
 const bungee = Bungee({ subsets: ['latin-ext'], display: 'swap', weight: ['400'] });
 
 const Header = () => {
+  const [isToggleOpen, setIsToggleOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   useEffect(() => {
@@ -54,13 +57,27 @@ const Header = () => {
           >
             Liên hệ
           </button>
-          <button className='bg-[white] text-black font-bold py-2 px-4 rounded-full cursor-pointer flex justify-center items-center'>
+          <button className='bg-[white] text-black font-bold py-2 px-4 rounded-full cursor-pointer hidden lg:flex justify-center items-center'>
             <Image className='mr-2' height={20} width={20} src={'/images/VN.png'} alt={''} />
             <p>VN</p>
           </button>
         </div>
+        <IconMenu className='block md:hidden w-[24px] h-[24px] cursor-pointer' onClick={() => setIsToggleOpen(!isToggleOpen)} />
+        {!isToggleOpen && <IconClose className='absolute top-3 right-5 z-50 md:hidden w-[24px] h-[24px] cursor-pointer' onClick={() => setIsToggleOpen(!isToggleOpen)} /> }
+        <ul
+        className={`col-span-4 w-full absolute top-0 left-0 bg-[#1B3864] px-4 py-4 md:px-0 md:pb-0 md:pt-5 justify-center items-center md:justify-center md:items-start gap-5 text-center flex flex-col md:flex-row md:relative md:border-b laptop:border-b-gray-100 ${
+          isToggleOpen ? 'hidden md:flex' : 'flex'
+        }`}
+      >
+        {fakeMenu.map((item, inx) => (
+          <Link href={item.link} key={inx} onClick={() => setIsToggleOpen(!isToggleOpen)}>
+            <li className={`text-sm ${router.pathname === item.link && 'pb-2 border-b border-b-gray-200'}`}>
+              {item.title}
+            </li>
+          </Link>
+        ))}
+      </ul>
       </div>
-      <div className='block md:hidden'>...</div>
     </section>
   );
 };

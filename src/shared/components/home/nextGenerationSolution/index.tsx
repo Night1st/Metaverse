@@ -4,7 +4,7 @@ import InfoCard from "./InfoCard";
 
 const NextGenerationSolution = () => {
   return ( 
-    <section className="max-w-[1440px] pb-4 md:pb-8 lg:pb-10 xl:pb-24">
+    <section className="max-w-[1440px] px-4 pb-4 md:pb-8 lg:pb-10 xl:pb-24">
       <TitleSection
         title="GIẢI PHÁP"
         description="Metaverse cung cấp giải pháp toàn diện trong nhiều lĩnh vực"

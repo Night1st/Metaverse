@@ -19,7 +19,7 @@ export function Home() {
     <>
       <Head>
         <title>Trang chủ</title>
-        <meta name='description' content='Trang chủ NGS' />
+        <meta name='description' content='Trang chủ Metaverse' />
         <meta name='keywords' content='Công nghệ thông tin, Giải pháp số' />
       </Head>
       <Banner data={homeData} text='Tìm hiểu thêm' />

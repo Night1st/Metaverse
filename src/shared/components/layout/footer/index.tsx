@@ -8,7 +8,7 @@ const bungee = Bungee({ subsets: ['latin-ext'], display: 'swap', weight: ['400']
 const Footer = () => {
   return (
     <section className='w-full flex flex-col gap-10 justify-between items-center mx-auto px-4 md:px-12 lg:px-24 py-10 bg-[#1B3864] text-white font-thin'>
-      <div className='max-w-[1440px] grid grid-cols-5 gap-10 justify-start items-start px-4'>
+      <div className='max-w-[1440px] grid grid-cols-1 md:grid-cols-5 gap-10 justify-start items-start px-4'>
         <div className='col-span-2 flex flex-col justify-center items-start gap-1 pr-5'>
           <div className={bungee.className}>
             <p className='text-6xl'>METAVERSE</p>
@@ -25,13 +25,13 @@ const Footer = () => {
             </p>
           ))}
         </div>
-        <div className='flex flex-col min-h-[300px]'>
+        <div className='flex flex-col'>
           <InforFooter title='Giải pháp' info={footerData.service} />
         </div>
-        <div className='flex flex-col min-h-[300px]'>
+        <div className='flex flex-col'>
           <InforFooter title='Về Metaverse' info={footerData.aboutUs} />
         </div>
-        <div className='flex flex-col min-h-[300px]'>
+        <div className='flex flex-col'>
           <InforFooter title='Hỗ trợ' info={footerData.support} />
         </div>
       </div>

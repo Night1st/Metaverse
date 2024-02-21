@@ -11,7 +11,7 @@ export const eventData = [
     {
         title: "On board",
         description:
-            "Chào mừng thành viên NGS mới gia nhập",
+            "Chào mừng thành viên Metaverse mới gia nhập",
         time: "20 thg 7 2023",
 
         address: "Phòng Công nghệ, Tầng 4, Toà 6th Element",
