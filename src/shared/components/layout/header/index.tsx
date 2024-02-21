@@ -66,7 +66,7 @@ const Header = () => {
         {!isToggleOpen && <IconClose className='absolute top-3 right-5 z-50 md:hidden w-[24px] h-[24px] cursor-pointer' onClick={() => setIsToggleOpen(!isToggleOpen)} /> }
         <ul
         className={`col-span-4 w-full absolute top-0 left-0 bg-[#1B3864] px-4 py-4 md:px-0 md:pb-0 md:pt-5 justify-center items-center md:justify-center md:items-start gap-5 text-center flex flex-col md:flex-row md:relative md:border-b laptop:border-b-gray-100 ${
-          isToggleOpen ? 'hidden md:flex' : 'flex'
+          isToggleOpen ? 'hidden' : 'flex'
         }`}
       >
         {fakeMenu.map((item, inx) => (

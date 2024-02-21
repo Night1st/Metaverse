@@ -11,7 +11,7 @@ const Footer = () => {
       <div className='max-w-[1440px] grid grid-cols-1 md:grid-cols-5 gap-10 justify-start items-start px-4'>
         <div className='col-span-2 flex flex-col justify-center items-start gap-1 pr-5'>
           <div className={bungee.className}>
-            <p className='text-6xl'>METAVERSE</p>
+            <p className='text-3xl md:text-6xl'>METAVERSE</p>
           </div>
           <div className='flex gap-3 py-2'>
             {footerData.icon.map((item, idx) => (
